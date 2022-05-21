@@ -140,6 +140,7 @@ ul {
     bottom: 200px;
     left: 0;
 }
+
 /* End Global Rules */
 
 /* Start Header */
@@ -191,7 +192,7 @@ header .menu>li input {
     display: none;
 }
 
-header .menu>li input:checked ~ .mega-menu {
+header .menu>li input:checked~.mega-menu {
     top: calc(100% + 1px);
     z-index: 1;
     opacity: 1;
@@ -211,6 +212,7 @@ header .menu>li>label {
 }
 
 @media (max-width: 767px) {
+
     header .menu>li>a,
     header .menu>li>label {
         padding: 10px;
@@ -598,6 +600,16 @@ header .mega-menu .links li a i {
 
 .features .container .card:hover .image::after {
     border-width: 170px 500px 170px 0px;
+}
+
+@media (min-width: 500px) and (max-width: 700px) {
+    .features .container .card .image::after {
+        border-width: 0px 0px 200px 650px;
+    }
+
+    .features .container .card:hover .image::after {
+        border-width: 200px 650px 200px 0px;
+    }
 }
 
 .features .container .card .image img {
